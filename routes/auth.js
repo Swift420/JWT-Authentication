@@ -41,7 +41,6 @@ router.post("/signup", [
 
     let hashedPassword  = await bcrypt.hash(password, 10)
 
-    console.log(hashedPassword)
 
         users.push({
             email: email,
@@ -54,7 +53,7 @@ router.post("/signup", [
 
 
 router.get("/allUsers", (req, res)=>{
-
+    
     res.json(users)
 })
 module.exports = router;
