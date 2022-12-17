@@ -1,12 +1,13 @@
 const router = require('express').Router(); 
 
 
-router.post("/register", (req,res)=> {
-    res.send("Register")
+router.post("/signup", (req,res)=> {
+
+    const {password, email} = req.body 
+
+    console.log(password, email)
+    res.send("signup")
 })
 
-router.post("/login", (req,res)=> {
-
-})
 
 module.exports = router;
